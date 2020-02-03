@@ -5,6 +5,7 @@ class player{
     String nama;
     int healthPoin;
     int speed;
+    int jarak;
 
   
     void lari(){
@@ -16,7 +17,7 @@ class player{
                 System.out.println ("level kesehatan " + this.nama+ " = " + this.healthPoin + " dan akan semakin kehabisan tenaga " );
             }else if (this.healthPoin <1){
                System.out.println(this.nama + " pun tidak punya tenaga lagi dan akhirnya berhenti berlari " );
-               System.out.println(this.nama + " menempuh jarak " + this.speed + "  Km") ;
+               System.out.println(this.nama + " menempuh jarak " + this.jarak + "  Km") ;
             } else {
                 System.out.println (this.nama + " tetap semangat berlari");
             }
@@ -38,11 +39,12 @@ public class Main {
         Sinta.nama= "Sinta Cantikkk";
         Sinta.healthPoin = 7;
         Sinta.speed =6;
+        Sinta.jarak=0;
         Sinta.tampilkan();
         Sinta.lari();
         do {
             Sinta.healthPoin--;
-            Sinta.speed+=Sinta.speed;
+            Sinta.jarak+=Sinta.speed;
             Sinta.akanCapek();
         }while (Sinta.healthPoin>0);
 
@@ -50,12 +52,13 @@ public class Main {
         Jojo.nama= "Jojo Tamvan";
         Jojo.healthPoin = 5;
         Jojo.speed =7;
+        Jojo.jarak=0;
         System.out.println("\n##### " + Sinta.nama + " digantikan oleh " + Jojo.nama + " #####");
         Jojo.tampilkan();
         Jojo.lari();
         do {
             Jojo.healthPoin--;
-            Jojo.speed+=Jojo.speed;
+            Jojo.jarak+=Jojo.speed;
             Jojo.akanCapek();
         }while (Jojo.healthPoin>0);
 
@@ -63,16 +66,17 @@ public class Main {
         Miya.nama= "Miya Manjaa";
         Miya.healthPoin = 4;
         Miya.speed =5;
+        Miya.jarak=0;
         System.out.println("\n##### " + Jojo.nama + " digantikan oleh " + Miya.nama + " #####");
         Miya.tampilkan();
         Miya.lari();
         do {
             Miya.healthPoin--;
-            Miya.speed+=Miya.speed;
+            Miya.jarak+=Miya.speed;
             Miya.akanCapek();
         }while (Miya.healthPoin>0);
 
-        int totalJarak=Sinta.speed + Jojo.speed +Miya.speed ;
+        int totalJarak=Sinta.jarak + Jojo.jarak +Miya.jarak ;
 
         System.out.println("\nTotal jarak yang dapat ditempuh ketiga pelari adalah " + totalJarak + " Km \n***PERMAINAN SELESAI***" );
     }
