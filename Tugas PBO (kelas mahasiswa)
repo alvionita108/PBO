@@ -1,0 +1,42 @@
+package com.tugas;
+
+ class mahasiswa{
+  String nama;
+  String nim;
+  float ipk;
+  
+  
+  mahasiswa (String namamhs,String nimmhs,float ipkmhs){
+    nama= namamhs;
+    nim=nimmhs;
+    ipk=ipkmhs;
+  }
+  
+  String getnama(){
+    return nama;
+  }
+  
+  void printdata(){
+   System.out.println("\n Nama = " + nama + "\n NIM = " + nim + "\n IPK = " + ipk);
+    
+  }
+  
+  void ubahnama(String namabaru){
+   nama=namabaru;
+    
+  }
+  
+  }
+
+
+public class Main {
+
+  public static void main(String[] args){
+  mahasiswa Budi = new mahasiswa("Budi","12345",4);
+  
+   Budi.printdata();
+   Budi.ubahnama("Budi Dermawan");
+   Budi.printdata();
+  
+}
+}
